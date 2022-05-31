@@ -1,0 +1,78 @@
+$max-width: 1600px;
+$min-width: 1000px;
+
+$blue:#2F84EF;
+$blueHover: #3A8DF5;
+$success:#5dca3c;
+$success-light:#e1f8dc;
+$warning:#fa9908;
+$warning-light:#fcf2e1;
+$danger:#fa4e45;
+$danger-btn:#fa6156;
+$danger-light:#fcebe9;
+$white:#FFFFFF;
+$scrollbar-color: #D9D9D9;
+$asideBg: #343542;
+$asideFontColor: #fff;
+
+$colorGray1:#333333; //主要文案:标题,正文等文案颜色
+$colorGray2:#666666; //次要文案:导航,通用icon文案
+$colorGray3:#999999; //辅助文案,提示文案
+$colorGray4:#CCCCCC; //组件边框 组件内提示文案 禁用态文案
+$colorGray5:#E8E8E8; //分割线文案
+$colorGray6:#F5F5F5; //禁用态背景色,table行hover底色
+$colorGray7:#FAFAFA; //表头底色
+$colorGray8:#EEF5FF; //标签背景色  辅助按钮背景
+
+$bodyBackgroundColor:#F9F9F9; //背景颜色
+$bodyBackgroundColorReset:#F8F9FA; //背景颜色
+
+$commonPadding: 24px;
+$commonPadding18: 18px;
+
+$sideBarWidth: 200px;
+$miniBarWidth: 94px;
+
+$sideBarItemHeight: 50px;
+$headerHeight: 40px;
+$svgPadding: 12px;
+$iconSize: 16px;
+
+$tagHieght: 40px;
+$topHeight:104px;
+// base color
+$light-blue:$colorGray8;
+$red: $danger;
+$pink: $danger;
+$green: $success;
+$tiffany: $success;
+$yellow: $warning;
+$panGreen: $success-light;
+$byte-blue: $blue;
+
+// sidebar
+$menuText:$colorGray1;
+$menuActiveText:$blue;
+$subMenuText:$colorGray2;
+$subMenuActiveText:$blue; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:$white;
+$menuHover:$white;
+
+$subMenuBg:$menuBg;
+$subMenuHover:$white;
+
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  subMenuText: $subMenuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

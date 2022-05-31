@@ -1,0 +1,106 @@
+//定义
+$pagination-height:32px;
+
+.el-pagination {
+  padding: 0; //total
+
+  span:not([class*=suffix]),
+  .el-pagination button {
+    line-height: 32px;
+    height: 32px;
+  }
+
+  //btn
+  .btn-prev,
+  .btn-next {
+    // transition: all .3s;
+    line-height: $pagination-height;
+    height: $pagination-height;
+    width: $pagination-height;
+    min-width: $pagination-height;
+    border: 1px solid #C6CBD4;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.03);
+    padding: 0;
+  }
+
+  .btn-next {
+    margin: 0 5px 0 0;
+  }
+
+  //pager
+  .el-pager {
+    li {
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      color: #606266;
+      margin: 0 0 0 8px;
+      line-height: $pagination-height;
+      height: $pagination-height;
+      width: $pagination-height;
+      min-width: $pagination-height;
+      border: 1px solid #D8D8D8;
+      border-radius: 2px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.03);
+
+      &.more {
+        border: none;
+        box-shadow: none;
+      }
+
+      &.active {
+        color: #fff;
+        background: $byte-blue;
+        border: 1px solid $byte-blue;
+        box-shadow: 0 1px 4px 0 rgba($byte-blue, 0.2);
+
+        &:hover {
+          color: #fff;
+        }
+
+        &+li {
+          /* elui中为了稳定去掉了active按钮后面兄弟元素的左边框 现在加回来*/
+          border-left: 1px solid #D8D8D8;
+        }
+      }
+
+      &:hover {
+        color: $byte-blue;
+      }
+
+      &:last-child {
+        margin-right: 8px;
+      }
+    }
+
+  }
+
+  //sizer
+  .el-pagination__sizes {
+    height: $pagination-height;
+
+    .el-input__inner {
+      height: $pagination-height;
+      border: 1px solid #D8D8D8;
+      border-radius: 2px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.03);
+    }
+  }
+
+  //jumper
+  .el-pagination__jump {
+    margin: 0 0 0 0;
+    height: $pagination-height;
+
+    .el-pagination__editor {
+      height: $pagination-height;
+
+      .el-input__inner {
+        height: $pagination-height;
+        line-height: $pagination-height;
+        font-size: 13px;
+      }
+    }
+  }
+}

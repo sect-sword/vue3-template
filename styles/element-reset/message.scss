@@ -1,0 +1,82 @@
+//图标还需要修改 样式 颜色 大小
+.el-message {
+  min-width: 300px;
+  height: 40px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 4px;
+  top: 55px;
+  padding: 12px 16px;
+
+  .el-message__icon {
+    margin-right: 4px;
+  }
+
+  .el-message__content {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(31, 45, 61, 1);
+    line-height: 40px;
+  }
+
+  .el-message__closeBtn {
+    color: #8C8C8C
+  }
+
+
+  .el-icon-success {
+    color: #02A854;
+
+    &:before {
+      // content: ""
+    }
+  }
+
+  .el-icon-warning {
+    color: #F69829;
+
+    &:before {
+      // content: ""
+    }
+  }
+
+  .el-icon-error {
+    color: #EE3742;
+
+    &:before {
+      // content: ""
+    }
+  }
+}
+
+//el-message-box
+.el-message-box {
+  width: 450px;
+  padding-bottom: 0;
+
+  .el-message-box__content {
+    padding: 32px 24px 24px 32px;
+    font-size: 16px;
+    color: #333333;
+  }
+
+  .el-message-box__btns {
+    padding: 0 24px 24px 32px;
+  }
+
+  .el-message-box__status+.el-message-box__message {
+    padding-right: 0px;
+    padding-left: 34px;
+  }
+
+  // .el-message-box__status {
+  //   top: 32px;
+  //   -webkit-transform: translateY(0);
+  //   transform: translateY(0);
+  // }
+}
+.el-notification__content p{
+  text-align: left;
+}

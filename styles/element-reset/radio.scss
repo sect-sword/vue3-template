@@ -1,0 +1,123 @@
+@import '../variables.scss';
+
+$font-color-default:$colorGray1;
+$font-color-checked:$blue;
+
+$border-color-default:$colorGray4;
+$border-color-checked:$blue;
+
+$bg-color-default:$colorGray6;
+$bg-color-default-hover:$colorGray8;
+
+$error-color:$danger-light;
+$error-font:$danger;
+
+$borderRadius:14px;
+$size-8:8px;
+$fontSize:12px;
+$size-12:12px;
+
+.el-radio .el-radio__inner{
+  margin-top: -1px;
+}
+.el-radio.el-radio--medium {
+  font-size:$fontSize;
+  height: 28px;
+  line-height: 26px;
+  color: $font-color-default;
+  padding: 0 10px;
+  .el-radio__inner{
+    border: 1px solid $border-color-default;
+    margin-top: 0px;
+  }
+  .el-radio__label{
+    font-size: $fontSize;
+    padding-left: $size-8;
+  }
+  &:hover {
+    background: $colorGray8;
+  }
+  &.is-bordered{
+    border-radius: $borderRadius;
+    .el-radio__inner{
+      &:hover,&:focus{
+        border: 1px solid $border-color-default;
+      }
+    }
+    &.is-checked{
+      background: $colorGray8;
+      .el-radio__label{
+        font-weight: 400;
+      }
+      .el-radio__inner{
+        border: 1px solid $border-color-checked;
+        &:hover,&:focus{
+          border: 1px solid $border-color-checked;
+        }
+      }
+    }
+    &:not(.is-checked){
+      .el-radio__label{
+        font-weight: 400;
+      }
+      &:hover{
+        background-color: $colorGray8;
+      }
+      border: 1px solid $colorGray6;
+      background-color: $colorGray6;
+      .el-radio__inner{
+        &:hover,&:focus{
+          border: 1px solid $border-color-default;
+        }
+      }
+    }
+    &.is-disabled{
+      &:hover,&:focus{
+        border: 1px solid $colorGray6;
+        background-color: $colorGray6;
+      }
+    }
+  }
+}
+.el-form-item.is-error{
+  .el-radio:not(.is-checked){
+    color: $error-font;
+    .el-radio__inner {
+      border: 1px solid $error-font;
+      &:hover,&:focus{
+        border: 1px solid $error-font;
+      }
+    }
+    &.is-disabled{
+      color: $error-color !important;
+      &:hover,&:focus{
+        color: $error-color;
+      }
+      .el-radio__inner {
+        border: 1px solid $border-color-default;
+        &:hover,&:focus{
+          border: 1px solid $border-color-default;
+        }
+      }
+    }
+  }
+  .el-radio.is-bordered:not(.is-checked) {
+    background-color: $error-color;
+    &:hover,&:focus{
+      border: 1px solid $error-color;
+      background-color: $error-color;
+    }
+    &.is-disabled{
+      background-color: $error-color;
+      &:hover,&:focus{
+        background-color: $error-color;
+      }
+      .el-radio__inner {
+        border: 1px solid $border-color-default;
+        &:hover,&:focus{
+          border: 1px solid $border-color-default;
+        }
+      }
+    }
+  }
+}
